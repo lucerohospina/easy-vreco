@@ -1,19 +1,14 @@
-
-  // var startInput = document.getElementById('start-input');
-  // var finishingInput = document.getElementById('finishing-input');
-  // new google.maps.places.Autocomplete(startInput);
-  // new google.maps.plaves.Autocomplete(finishingInput);
-
-  /* Agregando el gmap */
+// Inicializando funciones de google maps.
 function initMap() {
+  // Agregando el gmap 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397,
       lng: 150.644},
-    zoom: 6
+    zoom: 15
   });
   var infoWindow = new google.maps.InfoWindow({map: map});
 
-  // Try HTML5 geolocation.
+  // geolocalización de HTML5
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -31,6 +26,39 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+
+  // agregando input
+  var startInput = document.getElementById('start-input');
+  var finishingInput = document.getElementById('finishing-input');
+  new google.maps.places.Autocomplete(startInput);
+  new google.maps.places.Autocomplete(finishingInput);
+
+  // trazando ruta
+var directionsService = new google.maps.DirectionsService;
+var directionsDisplay = new google.maps.DirectionsRenderer;
+
+var calculateAndDisplayRoute = function(directionsService, directionsDisplay) {
+  directionsService.route({
+    origin: startInput.value,
+    destination: finishingInput.value,
+    travelMode: "DRIVING"
+  }, function(response, status) {
+    if(status === "OK") {
+      directionsDisplay.setDirections(response);
+    } else {
+      window.alert("No encontramos una ruta");
+    }
+  })
+}
+
+directionsDisplay.setMap(map);
+
+var drawRoute = function() {
+  calculateAndDisplayRoute(directionsService, directionsDisplay);
+};
+
+document.getElementById("finder-btn").addEventListener("click", drawRoute);
+console.log("click");
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -40,3 +68,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: Your browser doesn\'t support geolocation.');
 }
 
+ 
+
+  
