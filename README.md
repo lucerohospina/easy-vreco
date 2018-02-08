@@ -1,6 +1,7 @@
 # EASY VRECO
+> Desarrollado por: Lucero Hospina y Milagros Palma
 
-## Ejercicio Práctico.
+## Ejercicio Práctico
 
 * **OBJETIVO**: Desarrollar en parejas el ejercicio práctico de **GEOLOCATION**.
 
@@ -18,8 +19,9 @@
 
  4. Personalizar el marcador por defecto del mapa.
 
- ## Desarollado por:
+ ## Implementación
+ ![Vista web](assets/images/desktop.png)
 
- * Lucero Hospina
- * Milagros Palma
+ ## Herramientas
+ `HTML5` `CSS3` `JavaScript` `Geolocation API` `Google Maps` `Bootstrap`
 

@@ -1,9 +1,10 @@
-// window.addEventListener('load', function() {
 // Inicializando funciones de google maps.
 function initMap() {
   // Agregando el gmap 
-  var center = { lat: -34.397,
-lng: 150.644 };
+  var center = {
+    lat: -34.397,
+    lng: 150.644
+  };
   var map = new google.maps.Map(document.getElementById('map'), {
     center: center,
     zoom: 15
@@ -17,9 +18,9 @@ lng: 150.644 };
     position: center
   });
 
-    // var infoWindow = new google.maps.InfoWindow({map: map});
+  // var infoWindow = new google.maps.InfoWindow({map: map});
 
-    // geolocalización de HTML5
+  // geolocalización de HTML5
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -57,7 +58,7 @@ lng: 150.644 };
       if (status === 'OK') {
         directionsDisplay.setDirections(response);
       } else {
-        window.alert('No encontramos una ruta :(');
+        window.alert('No encontramos una ruta');
       }
     });
   };
@@ -78,5 +79,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: The Geolocation service failed.' :
     'Error: Your browser doesn\'t support geolocation.');
 }
-
-// });
