@@ -11,17 +11,17 @@
 
 * Sobre la **funcionalidad**:
 
- 1. Insertar un mapa de Google Maps indicando nuestra ubicación actual.
+   1. Insertar un mapa de Google Maps indicando nuestra ubicación actual.
 
- 2. Por medio de dos INPUT poder trazar una ruta en el mapa desde un punto de inicio y uno de llegada.
+   2. Por medio de dos INPUT poder trazar una ruta en el mapa desde un punto de inicio y uno de llegada.
 
- 3. Habilitar el autocompletado de Google Places.
+   3. Habilitar el autocompletado de Google Places.
 
- 4. Personalizar el marcador por defecto del mapa.
+   4. Personalizar el marcador por defecto del mapa.
 
  ## Implementación
  ![Vista web](assets/images/desktop.png)
 
  ## Herramientas
- `HTML5` `CSS3` `JavaScript` `Geolocation API` `Google Maps` `Bootstrap`
+ `HTML5` `CSS3` `JavaScript` `Geolocation API` `Google Maps` `Bootstrap 4`
 
