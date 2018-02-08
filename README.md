@@ -20,6 +20,9 @@
    4. Personalizar el marcador por defecto del mapa.
 
  ## Implementación
+
+ ![Vista web](assets/images/showing-bike-marker-on-map.PNG)
+
  ![Vista web](assets/images/desktop.png)
 
  ## Herramientas
